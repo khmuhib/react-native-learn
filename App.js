@@ -1,25 +1,18 @@
-import { View, Text, StatusBar } from 'react-native'
-import React from 'react'
-import Nav from './components/nav'
+import { Text, View } from 'react-native'
+import React, { Component } from 'react'
+import { customStyle } from './style'
 
-export default function App() {
-  return (
-    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-      <StatusBar backgroundColor={'red'}/>
-      <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-        <Text style={{fontSize: 30, fontWeight: 'bold', color: 'red', backgroundColor: 'green'}}>App dsajda a kasjdj </Text>
-      </View>
-      <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-        <Text>App dsajda a kasjdj </Text>
-      </View>
-      <View style={{flex: 1, alignItems: 'center', justifyContent: 'center',}}>
-        <Text>App dsajda a kasjdj </Text>
-      </View>
-      <View style={{flex: 1, alignItems: 'center', justifyContent: 'center',}}>
-        <Text style={{fontSize: 30, fontWeight: 'bold', color: 'red', backgroundColor: 'green'}}>kh Muhib</Text>
-      </View>
-      <Nav/>
-    </View>
+export default class App extends Component {
+  render() {
+    return (
+      <>
+        <View style={customStyle.container}>
+          <View style={customStyle.square}></View>
+        </View>
+      </>
 
-  )
+    )
+  }
 }
+
+
