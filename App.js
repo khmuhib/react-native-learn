@@ -1,20 +1,36 @@
-import { View, Text, StatusBar } from 'react-native'
-import React from 'react'
+import { View, Text, TextInput, StyleSheet } from 'react-native'
+import React, { useState } from 'react'
 
 export default function App() {
+
+  const [text, setText] = useState('sadsa')
+
   return (
-    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-      <StatusBar backgroundColor={'red'}/>
-      <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-        <Text style={{fontSize: 30, fontWeight: 'bold', color: 'red', backgroundColor: 'green'}}>App dsajda a kasjdj </Text>
+    <>
+      <View>
+        <Text>App dsadas</Text>
+        <TextInput style={style.inputBox} placeholder="Name" onChangeText={ value =>{
+          console.log(value)
+          setText(value)
+        }}/>
+        <TextInput style={style.inputBox} placeholder="Age"/>
+        <TextInput style={style.inputBox} placeholder="Phone"/>
       </View>
-      <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-        <Text>App dsajda a kasjdj </Text>
+      <View>
+        <Text>{text}</Text>
       </View>
-      <View style={{flex: 1, alignItems: 'center', justifyContent: 'center',}}>
-        <Text>App dsajda a kasjdj </Text>
-      </View>
-    </View>
+    </>
 
   )
 }
+
+const style = StyleSheet.create({
+  inputBox: {
+    borderColor: 'red',
+    borderWidth: 2,
+    margin: 10,
+    paddingStart: 20,
+    borderRadius: 50,
+
+  }
+})
