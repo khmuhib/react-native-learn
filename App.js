@@ -1,5 +1,6 @@
 import { View, Text, StatusBar } from 'react-native'
 import React from 'react'
+import Nav from './components/nav'
 
 export default function App() {
   return (
@@ -14,6 +15,10 @@ export default function App() {
       <View style={{flex: 1, alignItems: 'center', justifyContent: 'center',}}>
         <Text>App dsajda a kasjdj </Text>
       </View>
+      <View style={{flex: 1, alignItems: 'center', justifyContent: 'center',}}>
+        <Text style={{fontSize: 30, fontWeight: 'bold', color: 'red', backgroundColor: 'green'}}>kh Muhib</Text>
+      </View>
+      <Nav/>
     </View>
 
   )
